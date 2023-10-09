@@ -20,7 +20,10 @@ export default function isValidPassword(password = "") {
    *   return ...;
    * }
    */
+  if (!/^.{10}$/.test(password)) return false;
+  if (!/^[a-zA-Z0-9]$/.test(password)) return false;
+
   const setOfPassword = new Set([...password]);
-  if (setOfPassword.size < 4) return false;
+  if (setOfPassword.size <= 3) return false;
   return true;
 }
