@@ -30,12 +30,5 @@ export default function penaltyPoints(password = "") {
     prevChar = currChar;
   }
 
-  // Handle the end of the string
-  if (seqLength === 2) {
-    points++;
-  } else if (seqLength >= 3) {
-    points += 2;
-  }
-
   return points;
 }
