@@ -5,12 +5,10 @@
  */
 
 // FUNCTION 1
-export default function cntRbt(ls) {
-  var cnt = 0;
-  for (var i = 0; i < ls.length; i++) {
-    if (ls[i] == "R") {
-      cnt++;
-    }
+export default function countingRobot(list) {
+  let count = 0;
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] === "R") count++;
   }
-  return cnt;
+  return count;
 }
